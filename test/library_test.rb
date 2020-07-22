@@ -15,6 +15,7 @@ class LibraryTest < Minitest::Test
 
   def test_it_has_attributes
     assert_equal "Denver Public Library", @dpl.name
+    assert_equal [], @dpl.books
   end
 
 end
