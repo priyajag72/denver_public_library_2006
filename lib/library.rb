@@ -23,6 +23,9 @@ class Library
     end: author_writing_years.max
     }
     time_frame
+  end
+
+  def checkout
 
   end
 end
