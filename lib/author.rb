@@ -1,3 +1,5 @@
+require_relative "book"
+
 class Author
   attr_reader :name, :books
 
@@ -9,11 +11,15 @@ class Author
   end
 
   def write(title, date)
-    @books << Book.new({
+    add_book(Book.new({
       author_first_name: @first_name,
       author_last_name: @last_name,
       title: title,
-      publication_date: date})
+      publication_date: date}))
+  end
+
+  def add_book(book)
+    @books.push(book)
   end
 
 end

@@ -14,9 +14,15 @@ class Library
   end
 
   def publication_time_frame_for(author)
-    x = author.books.map do |book|
+    author_writing_years = author.books.map do |book|
       book.publication_year
     end
-    require "pry"; binding.pry
+
+    time_frame = {
+      start: author_writing_years.min,
+    end: author_writing_years.max
+    }
+    time_frame
+
   end
 end
