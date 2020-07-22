@@ -28,4 +28,8 @@ class Library
   def checkout(book)
     self.books.include?(book)
   end
+
+  def checkout_books
+
+  end
 end
