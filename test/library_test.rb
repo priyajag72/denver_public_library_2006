@@ -13,7 +13,8 @@ class LibraryTest < Minitest::Test
     assert_instance_of Library, @dpl
   end
 
-  #def test_it_has_attributes
-  #end
+  def test_it_has_attributes
+    assert_equal "Denver Public Library", @dpl.name
+  end
 
 end
