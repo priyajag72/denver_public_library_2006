@@ -6,6 +6,6 @@ class Author
     @books = []
   end
 
-  def write
+  def write(book, publication_date)
   end
 end
