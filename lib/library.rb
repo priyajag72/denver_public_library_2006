@@ -25,7 +25,7 @@ class Library
     time_frame
   end
 
-  def checkout
+  def checkout(book)
 
   end
 end
