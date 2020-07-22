@@ -75,6 +75,7 @@ class LibraryTest < Minitest::Test
     @dpl.add_author(harper_lee)
 
     assert_equal true, @dpl.checkout(jane_eyre)
+    assert_equal [jane_eyre], @dpl.checkout_books
   end
 
 end
