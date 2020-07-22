@@ -4,6 +4,6 @@ class Library
 
   def initialize(name)
     @name = name
-
+    @books = []
   end
 end
