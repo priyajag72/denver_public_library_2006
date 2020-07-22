@@ -1,5 +1,6 @@
 require "minitest/autorun"
 require "minitest/pride"
+require "./lib/book"
 require "./lib/author"
 require "./lib/library"
 
@@ -26,8 +27,8 @@ class LibraryTest < Minitest::Test
     villette = charlotte_bronte.write("Villette", "1853")
     harper_lee = Author.new({first_name: "Harper", last_name: "Lee"})
     mockingbird = harper_lee.write("To Kill a Mockingbird", "July 11, 1960")
-    dpl.add_author(charlotte_bronte)
-    dpl.add_author(harper_lee)
+    @dpl.add_author(charlotte_bronte)
+    @dpl.add_author(harper_lee)
     assert_equal [charlotte_bronte, harper_lee], @dpl.authors
     assert_equal [book1, professor, villette, mockingbird], @dpl.books
   end
