@@ -26,6 +26,6 @@ class Library
   end
 
   def checkout(book)
-
+    self.books.include?(book)
   end
 end

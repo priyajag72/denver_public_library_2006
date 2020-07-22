@@ -50,7 +50,7 @@ class LibraryTest < Minitest::Test
     assert_equal expected, @dpl.publication_time_frame_for(charlotte_bronte)
   end
 
-  def test_it_can_checkout_a_book
+  def test_it_can_checkout_if_book_exist_in_library_for_checkout
     charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
     jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
 
@@ -61,6 +61,20 @@ class LibraryTest < Minitest::Test
     assert_equal false, @dpl.checkout(mockingbird)
     assert_equal false, @dpl.checkout(jane_eyre)
 
+  end
+
+  def test_it_can_checkout_book_once_books_are_at_library
+    charlotte_bronte = Author.new({first_name: "Charlotte", last_name: "Bronte"})
+    jane_eyre = charlotte_bronte.write("Jane Eyre", "October 16, 1847")
+
+    villette = charlotte_bronte.write("Villette", "1853")
+    harper_lee = Author.new({first_name: "Harper", last_name: "Lee"})
+    mockingbird = harper_lee.write("To Kill a Mockingbird", "July 11, 1960")
+
+    @dpl.add_author(charlotte_bronte)
+    @dpl.add_author(harper_lee)
+
+    assert_equal true, @dpl.checkout(jane_eyre)
   end
 
 end
