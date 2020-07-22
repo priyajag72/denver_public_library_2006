@@ -12,4 +12,8 @@ class Library
     @authors << author
     @books << author.books
   end
+
+  def publication_time_frame_for
+
+  end
 end
