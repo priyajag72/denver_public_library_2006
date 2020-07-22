@@ -9,7 +9,6 @@ class Library
   end
 
   def add_author(author)
-    require "pry"; binding.pry
-
+    @authors << author
   end
 end
