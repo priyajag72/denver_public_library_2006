@@ -7,4 +7,8 @@ class Library
     @books = []
     @authors = []
   end
+
+  def add_author
+
+  end
 end
