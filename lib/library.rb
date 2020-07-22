@@ -8,7 +8,8 @@ class Library
     @authors = []
   end
 
-  def add_author
+  def add_author(author)
+    require "pry"; binding.pry
 
   end
 end
