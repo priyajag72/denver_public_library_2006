@@ -9,9 +9,15 @@ class Book
 
   def publication_year
     if @publication.split[2] == nil
-      @publication.split[1]
+      if @publication.split[1] == nil
+        @publication.split[0]
+      else
+        @publication.split[1]
+      end
     elsif @publication.split[1] == nil
       @publication.split[0]
+    elsif @publication.split == [@publication]
+      @publication
     else
      @publication.split[2]
    end
