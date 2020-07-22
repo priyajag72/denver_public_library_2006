@@ -1,5 +1,5 @@
 class Author
 
-  def initialize
+  def initialize(author_details)
   end
 end
