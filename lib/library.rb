@@ -27,9 +27,11 @@ class Library
 
   def checkout(book)
     self.books.include?(book)
+    checkout_books(book)
   end
 
-  def checkout_books
-
+  def checkout_books(book)
+    checked_out = []
+    checked_out << book
   end
 end
