@@ -5,4 +5,7 @@ class Author
     @name = "#{author_details[:first_name]} #{author_details[:last_name]}"
     @books = []
   end
+
+  def write
+  end
 end
